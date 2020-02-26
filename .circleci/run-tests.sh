@@ -62,7 +62,7 @@ case $1 in
         ;;
     chipyard-sha3)
         (cd $LOCAL_CHIPYARD_DIR/generators/sha3/software && ./build.sh)
-        $LOCAL_SIM_DIR/simulator-chipyard-Sha3RocketConfig $LOCAL_CHIPYARD_DIR/generators/sha3/software/benchmarks/sha3-rocc.riscv
+        $LOCAL_SIM_DIR/simulator-chipyard-Sha3RocketConfig $LOCAL_CHIPYARD_DIR/generators/sha3/software/benchmarks/bare/sha3-rocc.riscv
         ;;
     tracegen)
         run_tracegen ${mapping[$1]}
