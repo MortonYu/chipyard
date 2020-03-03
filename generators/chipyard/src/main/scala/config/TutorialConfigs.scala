@@ -10,7 +10,7 @@ class TutorialStarterConfig extends Config(
   // IOBinders specify how to connect to IOs in our TestHarness
   // These config fragments do not affect
   new chipyard.iobinders.WithUARTAdapter ++       // Connect a SimUART adapter to display UART on stdout
-  new chipyard.iobinders.WithSimAXIMem ++         // Connect simulated external memory
+  new chipyard.iobinders.WithBlackBoxSimMem ++    // Connect simulated external memory
   new chipyard.iobinders.WithTieOffInterrupts ++  // Do not simulate external interrupts
   new chipyard.iobinders.WithTiedOffDebug ++      // Disconnect the debug module, since we use TSI for bring-up
   new chipyard.iobinders.WithSimSerial ++         // Connect external SimSerial widget to drive TSI
@@ -48,7 +48,7 @@ class TutorialStarterConfig extends Config(
 // Tutorial Phase 2: Integrate a TileLink or AXI4 MMIO device
 class TutorialMMIOConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
-  new chipyard.iobinders.WithSimAXIMem ++
+  new chipyard.iobinders.WithBlackBoxSimMem ++
   new chipyard.iobinders.WithTieOffInterrupts ++
   new chipyard.iobinders.WithTiedOffDebug ++
   new chipyard.iobinders.WithSimSerial ++
@@ -76,7 +76,7 @@ class TutorialMMIOConfig extends Config(
 // Tutorial Phase 3: Integrate a SHA3 RoCC accelerator
 class TutorialSha3Config extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
-  new chipyard.iobinders.WithSimAXIMem ++
+  new chipyard.iobinders.WithBlackBoxSimMem ++
   new chipyard.iobinders.WithTieOffInterrupts ++
   new chipyard.iobinders.WithTiedOffDebug ++
   new chipyard.iobinders.WithSimSerial ++
@@ -102,7 +102,7 @@ class TutorialSha3Config extends Config(
 // Tutorial Phase 4: Integrate a Black-box verilog version of the SHA3 RoCC accelerator
 class TutorialSha3BlackBoxConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
-  new chipyard.iobinders.WithSimAXIMem ++
+  new chipyard.iobinders.WithBlackBoxSimMem ++
   new chipyard.iobinders.WithTieOffInterrupts ++
   new chipyard.iobinders.WithTiedOffDebug ++
   new chipyard.iobinders.WithSimSerial ++
