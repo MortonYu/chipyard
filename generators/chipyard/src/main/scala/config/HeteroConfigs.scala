@@ -9,7 +9,7 @@ import freechips.rocketchip.config.{Config}
 class LargeBoomAndRocketConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++                      // display UART with a SimUARTAdapter
   new chipyard.iobinders.WithTieOffInterrupts ++                 // tie off top-level interrupts
-  new chipyard.iobinders.WithSimAXIMem ++                        // drive the master AXI4 memory with a SimAXIMem
+  new chipyard.iobinders.WithBlackBoxSimMem ++                        // drive the master AXI4 memory with a SimAXIMem
   new chipyard.iobinders.WithTiedOffDebug ++                     // tie off debug (since we are using SimSerial for testing)
   new chipyard.iobinders.WithSimSerial ++                        // drive TSI with SimSerial for testing
   new testchipip.WithTSI ++                                      // use testchipip serial offchip link
@@ -31,7 +31,7 @@ class LargeBoomAndRocketConfig extends Config(
 class HwachaLargeBoomAndHwachaRocketConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
   new chipyard.iobinders.WithTieOffInterrupts ++
-  new chipyard.iobinders.WithSimAXIMem ++
+  new chipyard.iobinders.WithBlackBoxSimMem ++
   new chipyard.iobinders.WithTiedOffDebug ++
   new chipyard.iobinders.WithSimSerial ++
   new testchipip.WithTSI ++
@@ -54,7 +54,7 @@ class HwachaLargeBoomAndHwachaRocketConfig extends Config(
 class DualLargeBoomAndRocketConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
   new chipyard.iobinders.WithTieOffInterrupts ++
-  new chipyard.iobinders.WithSimAXIMem ++
+  new chipyard.iobinders.WithBlackBoxSimMem ++
   new chipyard.iobinders.WithTiedOffDebug ++
   new chipyard.iobinders.WithSimSerial ++
   new testchipip.WithTSI ++
@@ -77,7 +77,7 @@ class DualLargeBoomAndRocketConfig extends Config(
 class LargeBoomAndHwachaRocketConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
   new chipyard.iobinders.WithTieOffInterrupts ++
-  new chipyard.iobinders.WithSimAXIMem ++
+  new chipyard.iobinders.WithBlackBoxSimMem ++
   new chipyard.iobinders.WithTiedOffDebug ++
   new chipyard.iobinders.WithSimSerial ++
   new testchipip.WithTSI ++
@@ -103,7 +103,7 @@ class LargeBoomAndHwachaRocketConfig extends Config(
 class LargeBoomAndRV32RocketConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
   new chipyard.iobinders.WithTieOffInterrupts ++
-  new chipyard.iobinders.WithSimAXIMem ++
+  new chipyard.iobinders.WithBlackBoxSimMem ++
   new chipyard.iobinders.WithTiedOffDebug ++
   new chipyard.iobinders.WithSimSerial ++
   new testchipip.WithTSI ++
@@ -127,7 +127,7 @@ class LargeBoomAndRV32RocketConfig extends Config(
 class DualLargeBoomAndDualRocketConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
   new chipyard.iobinders.WithTieOffInterrupts ++
-  new chipyard.iobinders.WithSimAXIMem ++
+  new chipyard.iobinders.WithBlackBoxSimMem ++
   new chipyard.iobinders.WithTiedOffDebug ++
   new chipyard.iobinders.WithSimSerial ++
   new testchipip.WithTSI ++
@@ -149,7 +149,7 @@ class DualLargeBoomAndDualRocketConfig extends Config(
 class LargeBoomAndRocketWithControlCoreConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
   new chipyard.iobinders.WithTieOffInterrupts ++
-  new chipyard.iobinders.WithSimAXIMem ++
+  new chipyard.iobinders.WithBlackBoxSimMem ++
   new chipyard.iobinders.WithTiedOffDebug ++
   new chipyard.iobinders.WithSimSerial ++
   new testchipip.WithTSI ++
