@@ -2,6 +2,17 @@ package chipyard
 
 import freechips.rocketchip.config.{Config}
 
+// This file is designed to accompany a live tutorial, with slides.
+// For each of 4 phases, participants will customize and build a
+// small demonstration config.
+
+// This file is designed to be used after running chipyard/scripts/tutorial-setup.sh,
+// which removes the SHA3 accelerator RTL, and provides participants
+// the experience of integrating external RTL.
+
+// This file was originally developed for the cancelled ASPLOS-2020
+// Chipyard tutorial. While the configs here work, the corresponding
+// slideware has not yet been created
 
 // NOTE: Configs should be read bottom-up, since they are applied bottom-up
 
